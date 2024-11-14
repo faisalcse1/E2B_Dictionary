@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmMain));
             mainMenu = new MenuStrip();
             fileToolStripMenuItem = new ToolStripMenuItem();
@@ -38,6 +40,10 @@
             findBanglaToolStripMenuItem = new ToolStripMenuItem();
             findEnglishToolStripMenuItem = new ToolStripMenuItem();
             helpToolStripMenuItem = new ToolStripMenuItem();
+            youtubeToolStripMenuItem = new ToolStripMenuItem();
+            facebookToolStripMenuItem = new ToolStripMenuItem();
+            sourceCodeToolStripMenuItem = new ToolStripMenuItem();
+            nugetToolStripMenuItem = new ToolStripMenuItem();
             aboutToolStripMenuItem = new ToolStripMenuItem();
             panel1 = new Panel();
             label2 = new Label();
@@ -51,19 +57,25 @@
             English = new DataGridViewTextBoxColumn();
             Bangla = new DataGridViewTextBoxColumn();
             Details = new DataGridViewTextBoxColumn();
+            label5 = new Label();
+            label6 = new Label();
+            pictureBox1 = new PictureBox();
+            label7 = new Label();
             mainMenu.SuspendLayout();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)wordGridView).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // mainMenu
             // 
-            mainMenu.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            mainMenu.BackColor = SystemColors.ActiveCaption;
+            mainMenu.Font = new Font("Times New Roman", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             mainMenu.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, findToolStripMenuItem, helpToolStripMenuItem, aboutToolStripMenuItem });
             mainMenu.Location = new Point(0, 0);
             mainMenu.Name = "mainMenu";
-            mainMenu.Size = new Size(850, 28);
+            mainMenu.Size = new Size(850, 25);
             mainMenu.TabIndex = 0;
             mainMenu.Text = "Main Menu";
             // 
@@ -71,13 +83,13 @@
             // 
             fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { exitToolStripMenuItem });
             fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            fileToolStripMenuItem.Size = new Size(44, 24);
+            fileToolStripMenuItem.Size = new Size(41, 21);
             fileToolStripMenuItem.Text = "File";
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(102, 24);
+            exitToolStripMenuItem.Size = new Size(99, 22);
             exitToolStripMenuItem.Text = "Exit";
             exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
@@ -85,33 +97,58 @@
             // 
             findToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { findBanglaToolStripMenuItem, findEnglishToolStripMenuItem });
             findToolStripMenuItem.Name = "findToolStripMenuItem";
-            findToolStripMenuItem.Size = new Size(49, 24);
+            findToolStripMenuItem.Size = new Size(45, 21);
             findToolStripMenuItem.Text = "Find";
             // 
             // findBanglaToolStripMenuItem
             // 
             findBanglaToolStripMenuItem.Name = "findBanglaToolStripMenuItem";
-            findBanglaToolStripMenuItem.Size = new Size(157, 24);
+            findBanglaToolStripMenuItem.Size = new Size(147, 22);
             findBanglaToolStripMenuItem.Text = "Find Bangla";
             findBanglaToolStripMenuItem.Click += findBanglaToolStripMenuItem_Click;
             // 
             // findEnglishToolStripMenuItem
             // 
             findEnglishToolStripMenuItem.Name = "findEnglishToolStripMenuItem";
-            findEnglishToolStripMenuItem.Size = new Size(157, 24);
+            findEnglishToolStripMenuItem.Size = new Size(147, 22);
             findEnglishToolStripMenuItem.Text = "Find English";
             findEnglishToolStripMenuItem.Click += findEnglishToolStripMenuItem_Click;
             // 
             // helpToolStripMenuItem
             // 
+            helpToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { youtubeToolStripMenuItem, facebookToolStripMenuItem, sourceCodeToolStripMenuItem, nugetToolStripMenuItem });
             helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            helpToolStripMenuItem.Size = new Size(53, 24);
+            helpToolStripMenuItem.Size = new Size(48, 21);
             helpToolStripMenuItem.Text = "Help";
+            // 
+            // youtubeToolStripMenuItem
+            // 
+            youtubeToolStripMenuItem.Name = "youtubeToolStripMenuItem";
+            youtubeToolStripMenuItem.Size = new Size(152, 22);
+            youtubeToolStripMenuItem.Text = "Youtube";
+            // 
+            // facebookToolStripMenuItem
+            // 
+            facebookToolStripMenuItem.Name = "facebookToolStripMenuItem";
+            facebookToolStripMenuItem.Size = new Size(152, 22);
+            facebookToolStripMenuItem.Text = "Facebook";
+            // 
+            // sourceCodeToolStripMenuItem
+            // 
+            sourceCodeToolStripMenuItem.Name = "sourceCodeToolStripMenuItem";
+            sourceCodeToolStripMenuItem.Size = new Size(152, 22);
+            sourceCodeToolStripMenuItem.Text = "Source Code";
+            // 
+            // nugetToolStripMenuItem
+            // 
+            nugetToolStripMenuItem.Name = "nugetToolStripMenuItem";
+            nugetToolStripMenuItem.Size = new Size(152, 22);
+            nugetToolStripMenuItem.Text = "Nuget";
             // 
             // aboutToolStripMenuItem
             // 
             aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            aboutToolStripMenuItem.Size = new Size(62, 24);
+            aboutToolStripMenuItem.Size = new Size(56, 21);
             aboutToolStripMenuItem.Text = "About";
             // 
             // panel1
@@ -121,7 +158,7 @@
             panel1.Controls.Add(label2);
             panel1.Controls.Add(findWordTextBox);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(0, 30);
+            panel1.Location = new Point(0, 94);
             panel1.Name = "panel1";
             panel1.Size = new Size(850, 44);
             panel1.TabIndex = 1;
@@ -132,7 +169,7 @@
             label2.AutoSize = true;
             label2.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.ControlText;
-            label2.Location = new Point(507, 11);
+            label2.Location = new Point(507, 13);
             label2.Name = "label2";
             label2.Size = new Size(337, 19);
             label2.TabIndex = 2;
@@ -141,7 +178,7 @@
             // findWordTextBox
             // 
             findWordTextBox.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            findWordTextBox.Location = new Point(114, 7);
+            findWordTextBox.Location = new Point(114, 9);
             findWordTextBox.Name = "findWordTextBox";
             findWordTextBox.Size = new Size(242, 27);
             findWordTextBox.TabIndex = 1;
@@ -151,7 +188,7 @@
             // 
             label1.AutoSize = true;
             label1.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(12, 11);
+            label1.Location = new Point(12, 13);
             label1.Name = "label1";
             label1.Size = new Size(78, 19);
             label1.TabIndex = 0;
@@ -163,7 +200,7 @@
             panel2.BackColor = SystemColors.ActiveCaption;
             panel2.Controls.Add(label4);
             panel2.Controls.Add(label3);
-            panel2.Location = new Point(0, 505);
+            panel2.Location = new Point(0, 534);
             panel2.Name = "panel2";
             panel2.Size = new Size(850, 37);
             panel2.TabIndex = 2;
@@ -198,7 +235,7 @@
             wordGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = SystemColors.Control;
-            dataGridViewCellStyle1.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.Font = new Font("Times New Roman", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
             dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
             dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
             dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
@@ -206,25 +243,27 @@
             wordGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             wordGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             wordGridView.Columns.AddRange(new DataGridViewColumn[] { SL, English, Bangla, Details });
-            wordGridView.Location = new Point(0, 76);
+            wordGridView.Location = new Point(0, 141);
             wordGridView.Name = "wordGridView";
             wordGridView.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            wordGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = SystemColors.Control;
+            dataGridViewCellStyle4.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            wordGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             wordGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            wordGridView.Size = new Size(850, 429);
+            wordGridView.Size = new Size(850, 392);
             wordGridView.TabIndex = 3;
             // 
             // SL
             // 
             SL.AutoSizeMode = DataGridViewAutoSizeColumnMode.None;
             SL.DataPropertyName = "SL";
+            dataGridViewCellStyle2.Font = new Font("Microsoft Sans Serif", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            SL.DefaultCellStyle = dataGridViewCellStyle2;
             SL.FillWeight = 40.60914F;
             SL.HeaderText = "SL";
             SL.Name = "SL";
@@ -234,6 +273,8 @@
             // English
             // 
             English.DataPropertyName = "En";
+            dataGridViewCellStyle3.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            English.DefaultCellStyle = dataGridViewCellStyle3;
             English.FillWeight = 83.94531F;
             English.HeaderText = "English";
             English.Name = "English";
@@ -255,11 +296,58 @@
             Details.Name = "Details";
             Details.ReadOnly = true;
             // 
+            // label5
+            // 
+            label5.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label5.Font = new Font("Times New Roman", 15.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label5.Location = new Point(680, 43);
+            label5.Name = "label5";
+            label5.Size = new Size(168, 37);
+            label5.TabIndex = 4;
+            label5.Text = "Programming Palli";
+            label5.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // label6
+            // 
+            label6.Font = new Font("Times New Roman", 20.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label6.ImageAlign = ContentAlignment.MiddleLeft;
+            label6.Location = new Point(74, 25);
+            label6.Name = "label6";
+            label6.Size = new Size(192, 66);
+            label6.TabIndex = 5;
+            label6.Text = "E2B Dictionary";
+            label6.TextAlign = ContentAlignment.MiddleCenter;
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.book1;
+            pictureBox1.Location = new Point(16, 27);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(64, 64);
+            pictureBox1.SizeMode = PictureBoxSizeMode.AutoSize;
+            pictureBox1.TabIndex = 6;
+            pictureBox1.TabStop = false;
+            // 
+            // label7
+            // 
+            label7.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            label7.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label7.Location = new Point(616, 50);
+            label7.Name = "label7";
+            label7.Size = new Size(70, 25);
+            label7.TabIndex = 7;
+            label7.Text = "Powered By:";
+            label7.TextAlign = ContentAlignment.MiddleCenter;
+            // 
             // frmMain
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(850, 542);
+            ClientSize = new Size(850, 570);
+            Controls.Add(label7);
+            Controls.Add(pictureBox1);
+            Controls.Add(label6);
+            Controls.Add(label5);
             Controls.Add(wordGridView);
             Controls.Add(panel2);
             Controls.Add(panel1);
@@ -277,6 +365,7 @@
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)wordGridView).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -296,12 +385,20 @@
         private Label label4;
         private Label label3;
         private DataGridView wordGridView;
+        private ToolStripMenuItem exitToolStripMenuItem;
+        private ToolStripMenuItem findBanglaToolStripMenuItem;
+        private ToolStripMenuItem findEnglishToolStripMenuItem;
+        private ToolStripMenuItem youtubeToolStripMenuItem;
+        private ToolStripMenuItem facebookToolStripMenuItem;
+        private ToolStripMenuItem sourceCodeToolStripMenuItem;
+        private ToolStripMenuItem nugetToolStripMenuItem;
         private DataGridViewTextBoxColumn SL;
         private DataGridViewTextBoxColumn English;
         private DataGridViewTextBoxColumn Bangla;
         private DataGridViewTextBoxColumn Details;
-        private ToolStripMenuItem exitToolStripMenuItem;
-        private ToolStripMenuItem findBanglaToolStripMenuItem;
-        private ToolStripMenuItem findEnglishToolStripMenuItem;
+        private Label label5;
+        private Label label6;
+        private PictureBox pictureBox1;
+        private Label label7;
     }
 }
