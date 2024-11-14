@@ -59,10 +59,11 @@
             // 
             // mainMenu
             // 
+            mainMenu.Font = new Font("Segoe UI", 11.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
             mainMenu.Items.AddRange(new ToolStripItem[] { fileToolStripMenuItem, findToolStripMenuItem, helpToolStripMenuItem, aboutToolStripMenuItem });
             mainMenu.Location = new Point(0, 0);
             mainMenu.Name = "mainMenu";
-            mainMenu.Size = new Size(850, 24);
+            mainMenu.Size = new Size(850, 28);
             mainMenu.TabIndex = 0;
             mainMenu.Text = "Main Menu";
             // 
@@ -70,13 +71,13 @@
             // 
             fileToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { exitToolStripMenuItem });
             fileToolStripMenuItem.Name = "fileToolStripMenuItem";
-            fileToolStripMenuItem.Size = new Size(37, 20);
+            fileToolStripMenuItem.Size = new Size(44, 24);
             fileToolStripMenuItem.Text = "File";
             // 
             // exitToolStripMenuItem
             // 
             exitToolStripMenuItem.Name = "exitToolStripMenuItem";
-            exitToolStripMenuItem.Size = new Size(93, 22);
+            exitToolStripMenuItem.Size = new Size(102, 24);
             exitToolStripMenuItem.Text = "Exit";
             exitToolStripMenuItem.Click += exitToolStripMenuItem_Click;
             // 
@@ -84,33 +85,33 @@
             // 
             findToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { findBanglaToolStripMenuItem, findEnglishToolStripMenuItem });
             findToolStripMenuItem.Name = "findToolStripMenuItem";
-            findToolStripMenuItem.Size = new Size(42, 20);
+            findToolStripMenuItem.Size = new Size(49, 24);
             findToolStripMenuItem.Text = "Find";
             // 
             // findBanglaToolStripMenuItem
             // 
             findBanglaToolStripMenuItem.Name = "findBanglaToolStripMenuItem";
-            findBanglaToolStripMenuItem.Size = new Size(180, 22);
+            findBanglaToolStripMenuItem.Size = new Size(157, 24);
             findBanglaToolStripMenuItem.Text = "Find Bangla";
             findBanglaToolStripMenuItem.Click += findBanglaToolStripMenuItem_Click;
             // 
             // findEnglishToolStripMenuItem
             // 
             findEnglishToolStripMenuItem.Name = "findEnglishToolStripMenuItem";
-            findEnglishToolStripMenuItem.Size = new Size(180, 22);
+            findEnglishToolStripMenuItem.Size = new Size(157, 24);
             findEnglishToolStripMenuItem.Text = "Find English";
             findEnglishToolStripMenuItem.Click += findEnglishToolStripMenuItem_Click;
             // 
             // helpToolStripMenuItem
             // 
             helpToolStripMenuItem.Name = "helpToolStripMenuItem";
-            helpToolStripMenuItem.Size = new Size(44, 20);
+            helpToolStripMenuItem.Size = new Size(53, 24);
             helpToolStripMenuItem.Text = "Help";
             // 
             // aboutToolStripMenuItem
             // 
             aboutToolStripMenuItem.Name = "aboutToolStripMenuItem";
-            aboutToolStripMenuItem.Size = new Size(52, 20);
+            aboutToolStripMenuItem.Size = new Size(62, 24);
             aboutToolStripMenuItem.Text = "About";
             // 
             // panel1
@@ -120,7 +121,7 @@
             panel1.Controls.Add(label2);
             panel1.Controls.Add(findWordTextBox);
             panel1.Controls.Add(label1);
-            panel1.Location = new Point(0, 26);
+            panel1.Location = new Point(0, 30);
             panel1.Name = "panel1";
             panel1.Size = new Size(850, 44);
             panel1.TabIndex = 1;
@@ -129,11 +130,11 @@
             // 
             label2.Anchor = AnchorStyles.Top | AnchorStyles.Right;
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
             label2.ForeColor = SystemColors.ControlText;
-            label2.Location = new Point(463, 11);
+            label2.Location = new Point(507, 11);
             label2.Name = "label2";
-            label2.Size = new Size(379, 21);
+            label2.Size = new Size(337, 19);
             label2.TabIndex = 2;
             label2.Text = "Bangla Dictionary With Bangla && English Search";
             // 
@@ -149,10 +150,10 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label1.Location = new Point(12, 9);
+            label1.Font = new Font("Times New Roman", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(12, 11);
             label1.Name = "label1";
-            label1.Size = new Size(89, 21);
+            label1.Size = new Size(78, 19);
             label1.TabIndex = 0;
             label1.Text = "Find Word";
             // 
@@ -171,10 +172,10 @@
             // 
             label4.Anchor = AnchorStyles.Bottom | AnchorStyles.Left;
             label4.AutoSize = true;
-            label4.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
-            label4.Location = new Point(6, 8);
+            label4.Font = new Font("Times New Roman", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label4.Location = new Point(6, 9);
             label4.Name = "label4";
-            label4.Size = new Size(310, 20);
+            label4.Size = new Size(280, 17);
             label4.TabIndex = 2;
             label4.Text = "Web Site: https://faisalcse1.gitlab.io/home";
             // 
@@ -182,10 +183,10 @@
             // 
             label3.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
             label3.AutoSize = true;
-            label3.Font = new Font("Segoe UI", 11.25F, FontStyle.Bold);
-            label3.Location = new Point(621, 8);
+            label3.Font = new Font("Times New Roman", 11.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label3.Location = new Point(633, 9);
             label3.Name = "label3";
-            label3.Size = new Size(223, 20);
+            label3.Size = new Size(211, 17);
             label3.TabIndex = 1;
             label3.Text = "Mail To: faisalcse3@gmail.com";
             // 
@@ -205,7 +206,7 @@
             wordGridView.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             wordGridView.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             wordGridView.Columns.AddRange(new DataGridViewColumn[] { SL, English, Bangla, Details });
-            wordGridView.Location = new Point(0, 70);
+            wordGridView.Location = new Point(0, 76);
             wordGridView.Name = "wordGridView";
             wordGridView.ReadOnly = true;
             dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
@@ -217,7 +218,7 @@
             dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
             wordGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             wordGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            wordGridView.Size = new Size(850, 435);
+            wordGridView.Size = new Size(850, 429);
             wordGridView.TabIndex = 3;
             // 
             // SL

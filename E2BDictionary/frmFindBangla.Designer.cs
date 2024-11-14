@@ -1029,10 +1029,11 @@
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(28, 257);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(77, 15);
+            label1.Size = new Size(72, 15);
             label1.TabIndex = 13;
             label1.Text = "Search Result";
             // 
@@ -1042,6 +1043,7 @@
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(searchTextBox);
             groupBox1.Controls.Add(searchButton);
+            groupBox1.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             groupBox1.Location = new Point(9, 1);
             groupBox1.Margin = new Padding(4, 3, 4, 3);
             groupBox1.Name = "groupBox1";
@@ -1993,11 +1995,11 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.Location = new Point(21, 219);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(86, 20);
+            label2.Size = new Size(79, 19);
             label2.TabIndex = 11;
             label2.Text = "Find Word ";
             // 
@@ -2015,6 +2017,7 @@
             // 
             // searchButton
             // 
+            searchButton.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             searchButton.Location = new Point(352, 215);
             searchButton.Margin = new Padding(4, 3, 4, 3);
             searchButton.Name = "searchButton";
@@ -2044,6 +2047,7 @@
             Controls.Add(label1);
             Controls.Add(groupBox1);
             Controls.Add(dataGridView);
+            Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 3, 4, 3);
             MaximizeBox = false;

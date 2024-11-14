@@ -47,7 +47,15 @@ namespace E2BDictionary
                     {
                         rowIndex = words.IndexOf(word);
                         wordGridView.Rows[rowIndex].Selected = true;
-                        wordGridView.FirstDisplayedScrollingRowIndex = rowIndex;
+                        if (rowIndex <100 )
+                        {
+                            wordGridView.FirstDisplayedScrollingRowIndex = rowIndex;
+                        }
+                        else
+                        {
+                            wordGridView.FirstDisplayedScrollingRowIndex = rowIndex-10;
+                        }
+                        
                     }
 
                 }

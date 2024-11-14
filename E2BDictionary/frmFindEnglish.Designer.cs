@@ -28,7 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmFindEnglish));
             searchButton = new Button();
             findWordTextBox = new TextBox();
@@ -69,7 +68,7 @@
             // 
             // searchButton
             // 
-            searchButton.Font = new Font("Segoe UI", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            searchButton.Font = new Font("Times New Roman", 9.75F, FontStyle.Regular, GraphicsUnit.Point, 0);
             searchButton.Location = new Point(381, 128);
             searchButton.Margin = new Padding(4, 3, 4, 3);
             searchButton.Name = "searchButton";
@@ -99,14 +98,6 @@
             dataGridView.Margin = new Padding(4, 3, 4, 3);
             dataGridView.Name = "dataGridView";
             dataGridView.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Microsoft Sans Serif", 14.25F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dataGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dataGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dataGridView.Size = new Size(483, 173);
             dataGridView.TabIndex = 8;
@@ -143,6 +134,7 @@
             groupBox1.Controls.Add(label2);
             groupBox1.Controls.Add(findWordTextBox);
             groupBox1.Controls.Add(searchButton);
+            groupBox1.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             groupBox1.Location = new Point(13, 14);
             groupBox1.Margin = new Padding(4, 3, 4, 3);
             groupBox1.Name = "groupBox1";
@@ -507,21 +499,22 @@
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Microsoft Sans Serif", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            label2.Font = new Font("Times New Roman", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label2.Location = new Point(21, 133);
             label2.Margin = new Padding(4, 0, 4, 0);
             label2.Name = "label2";
-            label2.Size = new Size(86, 20);
+            label2.Size = new Size(79, 19);
             label2.TabIndex = 11;
             label2.Text = "Find Word ";
             // 
             // label1
             // 
             label1.AutoSize = true;
+            label1.Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             label1.Location = new Point(10, 193);
             label1.Margin = new Padding(4, 0, 4, 0);
             label1.Name = "label1";
-            label1.Size = new Size(77, 15);
+            label1.Size = new Size(72, 15);
             label1.TabIndex = 10;
             label1.Text = "Search Result";
             // 
@@ -533,6 +526,7 @@
             Controls.Add(label1);
             Controls.Add(groupBox1);
             Controls.Add(dataGridView);
+            Font = new Font("Times New Roman", 9F, FontStyle.Regular, GraphicsUnit.Point, 0);
             Icon = (Icon)resources.GetObject("$this.Icon");
             Margin = new Padding(4, 3, 4, 3);
             MaximizeBox = false;
