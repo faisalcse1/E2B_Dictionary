@@ -1,4 +1,5 @@
 using E2BWordBank;
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 
 namespace E2BDictionary
@@ -47,15 +48,15 @@ namespace E2BDictionary
                     {
                         rowIndex = words.IndexOf(word);
                         wordGridView.Rows[rowIndex].Selected = true;
-                        if (rowIndex <100 )
+                        if (rowIndex < 100)
                         {
                             wordGridView.FirstDisplayedScrollingRowIndex = rowIndex;
                         }
                         else
                         {
-                            wordGridView.FirstDisplayedScrollingRowIndex = rowIndex-10;
+                            wordGridView.FirstDisplayedScrollingRowIndex = rowIndex - 10;
                         }
-                        
+
                     }
 
                 }
@@ -101,6 +102,54 @@ namespace E2BDictionary
             {
                 frmFindEnglish frm = new frmFindEnglish();
                 frm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void youtubeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process.Start(new ProcessStartInfo("https://www.youtube.com/programmingpalli") { UseShellExecute = true });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void facebookToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process.Start(new ProcessStartInfo("https://www.facebook.com/programmingpalli") { UseShellExecute = true });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void sourceCodeToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process.Start(new ProcessStartInfo("https://github.com/faisalcse1/E2B_Dictionary") { UseShellExecute = true });                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void nugetToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                Process.Start(new ProcessStartInfo("https://www.nuget.org/packages/E2BWordBank") { UseShellExecute = true });                
             }
             catch (Exception ex)
             {

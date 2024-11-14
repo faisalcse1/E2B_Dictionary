@@ -124,26 +124,30 @@
             // youtubeToolStripMenuItem
             // 
             youtubeToolStripMenuItem.Name = "youtubeToolStripMenuItem";
-            youtubeToolStripMenuItem.Size = new Size(152, 22);
+            youtubeToolStripMenuItem.Size = new Size(180, 22);
             youtubeToolStripMenuItem.Text = "Youtube";
+            youtubeToolStripMenuItem.Click += youtubeToolStripMenuItem_Click;
             // 
             // facebookToolStripMenuItem
             // 
             facebookToolStripMenuItem.Name = "facebookToolStripMenuItem";
-            facebookToolStripMenuItem.Size = new Size(152, 22);
+            facebookToolStripMenuItem.Size = new Size(180, 22);
             facebookToolStripMenuItem.Text = "Facebook";
+            facebookToolStripMenuItem.Click += facebookToolStripMenuItem_Click;
             // 
             // sourceCodeToolStripMenuItem
             // 
             sourceCodeToolStripMenuItem.Name = "sourceCodeToolStripMenuItem";
-            sourceCodeToolStripMenuItem.Size = new Size(152, 22);
+            sourceCodeToolStripMenuItem.Size = new Size(180, 22);
             sourceCodeToolStripMenuItem.Text = "Source Code";
+            sourceCodeToolStripMenuItem.Click += sourceCodeToolStripMenuItem_Click;
             // 
             // nugetToolStripMenuItem
             // 
             nugetToolStripMenuItem.Name = "nugetToolStripMenuItem";
-            nugetToolStripMenuItem.Size = new Size(152, 22);
+            nugetToolStripMenuItem.Size = new Size(180, 22);
             nugetToolStripMenuItem.Text = "Nuget";
+            nugetToolStripMenuItem.Click += nugetToolStripMenuItem_Click;
             // 
             // aboutToolStripMenuItem
             // 
