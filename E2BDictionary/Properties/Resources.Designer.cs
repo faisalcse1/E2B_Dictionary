@@ -79,5 +79,15 @@ namespace E2BDictionary.Properties {
                 return ((System.Drawing.Bitmap)(obj));
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap MD_FAISAL {
+            get {
+                object obj = ResourceManager.GetObject("MD-FAISAL", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
     }
 }

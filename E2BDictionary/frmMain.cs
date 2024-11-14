@@ -137,7 +137,7 @@ namespace E2BDictionary
         {
             try
             {
-                Process.Start(new ProcessStartInfo("https://github.com/faisalcse1/E2B_Dictionary") { UseShellExecute = true });                
+                Process.Start(new ProcessStartInfo("https://github.com/faisalcse1/E2B_Dictionary") { UseShellExecute = true });
             }
             catch (Exception ex)
             {
@@ -149,7 +149,20 @@ namespace E2BDictionary
         {
             try
             {
-                Process.Start(new ProcessStartInfo("https://www.nuget.org/packages/E2BWordBank") { UseShellExecute = true });                
+                Process.Start(new ProcessStartInfo("https://www.nuget.org/packages/E2BWordBank") { UseShellExecute = true });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void aboutToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                About about = new About();
+                about.ShowDialog(); 
             }
             catch (Exception ex)
             {
