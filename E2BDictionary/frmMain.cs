@@ -91,7 +91,7 @@ namespace E2BDictionary
         {
             try
             {
-                frmFindBangla frm = new frmFindBangla();
+                frmFindEnglish frm = new frmFindEnglish();
                 frm.ShowDialog();
             }
             catch (Exception ex)

@@ -266,38 +266,38 @@ namespace E2BDictionary
         {
             string value = searchTextBox.Text;
         
-            char[] val = value.ToCharArray();
-            char[]va=new char[val.Count()+2];
-            int falg = 0;
-            if(value.Length==val.Count())
-            {
-                for (int i = 0; i < val.Count(); i++)
-                {
-                    if (val[i] == '\r' || val[i] == '\n')
-                    {
-                        falg = 1;
-                      continue; 
-                    }
-                    va[i] = val[i];
-                }
-                if(falg==0)
-                {
-                    va[val.Count()] = '\r';
-                    va[val.Count() + 1] = '\n';
-                }
+            //char[] val = value.ToCharArray();
+            //char[]va=new char[val.Count()+2];
+            //int falg = 0;
+            //if(value.Length==val.Count())
+            //{
+            //    for (int i = 0; i < val.Count(); i++)
+            //    {
+            //        if (val[i] == '\r' || val[i] == '\n')
+            //        {
+            //            falg = 1;
+            //          continue; 
+            //        }
+            //        va[i] = val[i];
+            //    }
+            //    if(falg==0)
+            //    {
+            //        va[val.Count()] = '\r';
+            //        va[val.Count() + 1] = '\n';
+            //    }
             
-            }
-            string mm = "";
-            if(falg==1)
-            {
-                mm = value;
-            }
-            else
-            {
-                mm = new string(va);
-            }
+            //}
+            //string mm = "";
+            //if(falg==1)
+            //{
+            //    mm = value;
+            //}
+            //else
+            //{
+            //    mm = new string(va);
+            //}
          
-            var data = wordList.Where(s => s.Bn.Equals(mm)).ToList();
+            var data = wordList.Where(s => s.Bn.Equals(value)).ToList();
             if (searchTextBox.Text == "")
             {
                 MessageBox.Show("Please type something .", "Warning", MessageBoxButtons.OKCancel, MessageBoxIcon.Warning);
