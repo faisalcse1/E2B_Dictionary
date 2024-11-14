@@ -35,6 +35,8 @@
             fileToolStripMenuItem = new ToolStripMenuItem();
             exitToolStripMenuItem = new ToolStripMenuItem();
             findToolStripMenuItem = new ToolStripMenuItem();
+            findBanglaToolStripMenuItem = new ToolStripMenuItem();
+            findEnglishToolStripMenuItem = new ToolStripMenuItem();
             helpToolStripMenuItem = new ToolStripMenuItem();
             aboutToolStripMenuItem = new ToolStripMenuItem();
             panel1 = new Panel();
@@ -80,9 +82,24 @@
             // 
             // findToolStripMenuItem
             // 
+            findToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { findBanglaToolStripMenuItem, findEnglishToolStripMenuItem });
             findToolStripMenuItem.Name = "findToolStripMenuItem";
             findToolStripMenuItem.Size = new Size(42, 20);
             findToolStripMenuItem.Text = "Find";
+            // 
+            // findBanglaToolStripMenuItem
+            // 
+            findBanglaToolStripMenuItem.Name = "findBanglaToolStripMenuItem";
+            findBanglaToolStripMenuItem.Size = new Size(180, 22);
+            findBanglaToolStripMenuItem.Text = "Find Bangla";
+            findBanglaToolStripMenuItem.Click += findBanglaToolStripMenuItem_Click;
+            // 
+            // findEnglishToolStripMenuItem
+            // 
+            findEnglishToolStripMenuItem.Name = "findEnglishToolStripMenuItem";
+            findEnglishToolStripMenuItem.Size = new Size(180, 22);
+            findEnglishToolStripMenuItem.Text = "Find English";
+            findEnglishToolStripMenuItem.Click += findEnglishToolStripMenuItem_Click;
             // 
             // helpToolStripMenuItem
             // 
@@ -283,5 +300,7 @@
         private DataGridViewTextBoxColumn Bangla;
         private DataGridViewTextBoxColumn Details;
         private ToolStripMenuItem exitToolStripMenuItem;
+        private ToolStripMenuItem findBanglaToolStripMenuItem;
+        private ToolStripMenuItem findEnglishToolStripMenuItem;
     }
 }

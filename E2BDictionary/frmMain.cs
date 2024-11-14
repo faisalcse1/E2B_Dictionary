@@ -40,7 +40,7 @@ namespace E2BDictionary
                 }
                 else
                 {
-                    int rowIndex = 0;                    
+                    int rowIndex = 0;
                     var words = (List<Word>)wordGridView.DataSource;
                     var word = words.FirstOrDefault(c => c.En.ToLower().StartsWith(searchValue.ToLower()));
                     if (word != null)
@@ -70,7 +70,33 @@ namespace E2BDictionary
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error); ;
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void findBanglaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmFindBangla frm = new frmFindBangla();
+                frm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void findEnglishToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                frmFindBangla frm = new frmFindBangla();
+                frm.ShowDialog();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }
