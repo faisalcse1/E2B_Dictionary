@@ -58,16 +58,6 @@
             "ComponentsUrl" = "8:"
                 "Items"
                 {
-                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:.NETFramework,Version=v4.7.2"
-                    {
-                    "Name" = "8:Microsoft .NET Framework 4.7.2 (x86 and x64)"
-                    "ProductCode" = "8:.NETFramework,Version=v4.7.2"
-                    }
-                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.NetCore.DesktopRuntime.8.0.x86"
-                    {
-                    "Name" = "8:.NET Desktop Runtime 8.0.11 (x86)"
-                    "ProductCode" = "8:Microsoft.NetCore.DesktopRuntime.8.0.x86"
-                    }
                 }
             }
         }
@@ -228,7 +218,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:E2B Dictionary"
         "ProductCode" = "8:{A1F6B734-6A4C-4FE0-86D5-DD442455D840}"
-        "PackageCode" = "8:{A10671FB-499E-4113-A5A9-387C33A89314}"
+        "PackageCode" = "8:{0D34DD85-FAD6-459D-957D-81D7EA66CD1A}"
         "UpgradeCode" = "8:{41081178-0E28-423F-8A1D-7F6BDF8BF006}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
