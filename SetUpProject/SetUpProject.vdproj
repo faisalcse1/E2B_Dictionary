@@ -21,12 +21,6 @@
         }
         "Entry"
         {
-        "MsmKey" = "8:_46B8F1E078C449BD81C4CD4AD06D951B"
-        "OwnerKey" = "8:_UNDEFINED"
-        "MsmSig" = "8:_UNDEFINED"
-        }
-        "Entry"
-        {
         "MsmKey" = "8:_667C6AF38AF54CC2B1D52A412DB53FFD"
         "OwnerKey" = "8:_UNDEFINED"
         "MsmSig" = "8:_UNDEFINED"
@@ -58,6 +52,11 @@
             "ComponentsUrl" = "8:"
                 "Items"
                 {
+                    "{EDC2488A-8267-493A-A98E-7D9C3B36CDF3}:Microsoft.NetCore.CoreRuntime.8.0.x64"
+                    {
+                    "Name" = "8:.NET Runtime 8.0.11 (x64)"
+                    "ProductCode" = "8:Microsoft.NetCore.CoreRuntime.8.0.x64"
+                    }
                 }
             }
         }
@@ -82,20 +81,6 @@
     {
         "CustomAction"
         {
-            "{4AA51A2D-7D85-4A59-BA75-B0809FC8B380}:_224D165161854B16939FEE367D937664"
-            {
-            "Name" = "8:windowsdesktop-runtime-8.0.11-win-x64.exe"
-            "Condition" = "8:"
-            "Object" = "8:_46B8F1E078C449BD81C4CD4AD06D951B"
-            "FileType" = "3:2"
-            "InstallAction" = "3:1"
-            "Arguments" = "8:/Install"
-            "EntryPoint" = "8:"
-            "Sequence" = "3:1"
-            "Identifier" = "8:_C2BF1C42_DBDD_41E3_B781_738692DFD20D"
-            "InstallerClass" = "11:FALSE"
-            "CustomActionData" = "8:"
-            }
         }
         "DefaultFeature"
         {
@@ -121,26 +106,6 @@
         }
         "File"
         {
-            "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_46B8F1E078C449BD81C4CD4AD06D951B"
-            {
-            "SourcePath" = "8:C:\\Users\\msi\\Downloads\\windowsdesktop-runtime-8.0.11-win-x64.exe"
-            "TargetName" = "8:windowsdesktop-runtime-8.0.11-win-x64.exe"
-            "Tag" = "8:"
-            "Folder" = "8:_A8C1539CB5ED4267AF0408E0BB15298F"
-            "Condition" = "8:"
-            "Transitive" = "11:FALSE"
-            "Vital" = "11:TRUE"
-            "ReadOnly" = "11:FALSE"
-            "Hidden" = "11:FALSE"
-            "System" = "11:FALSE"
-            "Permanent" = "11:FALSE"
-            "SharedLegacy" = "11:FALSE"
-            "PackageAs" = "3:1"
-            "Register" = "3:1"
-            "Exclude" = "11:FALSE"
-            "IsDependency" = "11:FALSE"
-            "IsolateTo" = "8:"
-            }
             "{1FB2D0AE-D3B9-43D4-B9DD-F88EC61E35DE}:_667C6AF38AF54CC2B1D52A412DB53FFD"
             {
             "SourcePath" = "8:..\\book.ico"
@@ -218,7 +183,7 @@
         "Name" = "8:Microsoft Visual Studio"
         "ProductName" = "8:E2B Dictionary"
         "ProductCode" = "8:{A1F6B734-6A4C-4FE0-86D5-DD442455D840}"
-        "PackageCode" = "8:{0D34DD85-FAD6-459D-957D-81D7EA66CD1A}"
+        "PackageCode" = "8:{ED57CE4D-7FAE-45B7-B440-119C240A38A9}"
         "UpgradeCode" = "8:{41081178-0E28-423F-8A1D-7F6BDF8BF006}"
         "AspNetVersion" = "8:4.0.30319.0"
         "RestartWWWService" = "11:FALSE"
