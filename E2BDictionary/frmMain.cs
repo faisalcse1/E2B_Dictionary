@@ -1,6 +1,7 @@
 using E2BWordBank;
 using System.Diagnostics;
 using System.Runtime.InteropServices;
+using System.Windows.Forms;
 
 namespace E2BDictionary
 {
@@ -162,9 +163,31 @@ namespace E2BDictionary
             try
             {
                 About about = new About();
-                about.ShowDialog(); 
+                about.ShowDialog();
             }
             catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void wordGridView_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            try
+            {
+                if (e.RowIndex >= 0)
+                {                    
+                    DataGridViewRow row = wordGridView.Rows[e.RowIndex];                    
+                    int value =(int) row.Cells[0].Value;
+                    var word = wordList.FirstOrDefault(c => c.Sl == value);
+                    if(word != null)
+                    {
+                        string details = $"English: {word.En}\nBangla: {word.Bn}\nDetails:{word.Details}\nEnSyns: {(word.EnSyns != null ? string.Join(",", word.EnSyns) : string.Empty)}\nBnSyns: {(word.BnSyns!=null?string.Join(",",word.BnSyns):string.Empty)}\nDescription: {(word.Sents!=null?string.Join(".",word.Sents):string.Empty)}";
+                        MessageBox.Show(details,"Information",MessageBoxButtons.OK,MessageBoxIcon.Information);
+                    }
+                }
+            }
+            catch(Exception ex)
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }

@@ -6,7 +6,12 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>book.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="book.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="E2BWordBank" Version="1.0.8" />

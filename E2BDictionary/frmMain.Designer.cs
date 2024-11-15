@@ -124,28 +124,28 @@
             // youtubeToolStripMenuItem
             // 
             youtubeToolStripMenuItem.Name = "youtubeToolStripMenuItem";
-            youtubeToolStripMenuItem.Size = new Size(180, 22);
+            youtubeToolStripMenuItem.Size = new Size(152, 22);
             youtubeToolStripMenuItem.Text = "Youtube";
             youtubeToolStripMenuItem.Click += youtubeToolStripMenuItem_Click;
             // 
             // facebookToolStripMenuItem
             // 
             facebookToolStripMenuItem.Name = "facebookToolStripMenuItem";
-            facebookToolStripMenuItem.Size = new Size(180, 22);
+            facebookToolStripMenuItem.Size = new Size(152, 22);
             facebookToolStripMenuItem.Text = "Facebook";
             facebookToolStripMenuItem.Click += facebookToolStripMenuItem_Click;
             // 
             // sourceCodeToolStripMenuItem
             // 
             sourceCodeToolStripMenuItem.Name = "sourceCodeToolStripMenuItem";
-            sourceCodeToolStripMenuItem.Size = new Size(180, 22);
+            sourceCodeToolStripMenuItem.Size = new Size(152, 22);
             sourceCodeToolStripMenuItem.Text = "Source Code";
             sourceCodeToolStripMenuItem.Click += sourceCodeToolStripMenuItem_Click;
             // 
             // nugetToolStripMenuItem
             // 
             nugetToolStripMenuItem.Name = "nugetToolStripMenuItem";
-            nugetToolStripMenuItem.Size = new Size(180, 22);
+            nugetToolStripMenuItem.Size = new Size(152, 22);
             nugetToolStripMenuItem.Text = "Nuget";
             nugetToolStripMenuItem.Click += nugetToolStripMenuItem_Click;
             // 
@@ -205,7 +205,7 @@
             panel2.BackColor = SystemColors.ActiveCaption;
             panel2.Controls.Add(label4);
             panel2.Controls.Add(label3);
-            panel2.Location = new Point(0, 534);
+            panel2.Location = new Point(0, 542);
             panel2.Name = "panel2";
             panel2.Size = new Size(850, 37);
             panel2.TabIndex = 2;
@@ -260,8 +260,9 @@
             dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
             wordGridView.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
             wordGridView.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
-            wordGridView.Size = new Size(850, 392);
+            wordGridView.Size = new Size(850, 400);
             wordGridView.TabIndex = 3;
+            wordGridView.CellDoubleClick += wordGridView_CellDoubleClick;
             // 
             // SL
             // 
@@ -349,7 +350,7 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             BackColor = SystemColors.InactiveCaption;
-            ClientSize = new Size(850, 570);
+            ClientSize = new Size(850, 578);
             Controls.Add(label7);
             Controls.Add(pictureBox1);
             Controls.Add(label6);
